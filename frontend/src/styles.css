@@ -1,0 +1,151 @@
+:root{
+  --bg:#fbfaf9;
+  --card:#fff;
+  --accent:#7cc6a3;
+  --muted:#9aa6a2;
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 8px 20px rgba(18,18,18,0.08);
+  --radius:14px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background: linear-gradient(180deg,#f6f9f8 0%, #fbfcfb 100%);
+  color:#123;
+  min-height:100vh;
+  padding:28px;
+}
+
+.app{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+
+header h1{
+  margin:0;
+  font-size:28px;
+  letter-spacing:0.6px;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin:0;
+  font-size:13px;
+}
+
+main{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:20px;
+}
+
+.left{
+  background:var(--card);
+  padding:18px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.right{
+  padding:18px;
+  border-radius:var(--radius);
+  background:var(--card);
+  box-shadow:var(--shadow);
+  min-height:320px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.placeholder{
+  color:var(--muted);
+  text-align:center;
+}
+
+.session-form input[type="text"], .session-form input[type="number"]{
+  width:100%;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #e6e6e6;
+  margin-bottom:10px;
+  outline:none;
+}
+
+.session-form .row{
+  display:flex;
+  gap:10px;
+}
+
+.session-form button{
+  padding:10px 14px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),#5bb9a4);
+  color:white;
+  border:none;
+  cursor:pointer;
+  min-width:90px;
+}
+
+.session-list{
+  list-style:none;
+  padding:0;
+  margin:12px 0 0 0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.session-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px;
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.9));
+  border:1px solid #f0f0f0;
+}
+
+.session-item.done{ opacity:0.6; text-decoration:line-through; }
+.session-item.active{ box-shadow:0 6px 18px rgba(0,0,0,0.06); border-left:4px solid var(--accent); }
+
+.session-item .left h3 { margin:0; font-size:15px; }
+.session-item .left small { color:var(--muted); }
+
+.session-item .actions button{
+  margin-left:8px;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.timer-card{
+  text-align:center;
+  padding:22px;
+  border-radius:12px;
+  width:100%;
+  box-shadow:var(--shadow);
+}
+
+.time{
+  font-size:48px;
+  margin:18px 0;
+  font-weight:700;
+}
+
+.timer-controls button{
+  padding:8px 14px;
+  margin:6px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+}
